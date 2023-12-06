@@ -17,4 +17,4 @@ SwiftUI, Swift, MapKit, CoreLocation, also used ConfettiSwiftUI (https://github.
 
 ## Screen record
 
-![](https://github.com/annagogley/mapGeoApp/blob/main/screenRecord.gif)
+![](https://github.com/annagogley/mapGeoApp/blob/main/screenshots/screenRecord.gif)
