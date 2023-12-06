@@ -47,7 +47,7 @@ struct MainMapView: View {
                     locationManager.makeLocationManager()
                     vm.locations = vm.generateMocLocations(for: locationManager.locationManager?.location?.coordinate ?? locationManager.mapRegion.center)
                 }
-            MenuView(locationManager: locationManager, locations: vm.locations)
+            MenuView(locationManager: locationManager, locations: $vm.locations)
         }
     }
 }

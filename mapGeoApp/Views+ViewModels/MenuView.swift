@@ -13,7 +13,7 @@ import CoreLocation
 
 struct MenuView : View {
     @StateObject var locationManager = LocationManager()
-    @State var locations : [Location]
+    @Binding var locations : [Location]
 
     var body : some View {
         HStack {

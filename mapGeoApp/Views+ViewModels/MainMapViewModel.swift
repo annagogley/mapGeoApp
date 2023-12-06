@@ -12,19 +12,19 @@ final class MainMapViewModel : ObservableObject {
     
     @Published var showBottomSheet = false
     @Published var pinTapped : Location = Location(name: "", imageName: "", lastSeenDate: "", lastSeenTime: "", location: CLLocationCoordinate2D())
-    @Published var locations : [Location]
+    @Published var locations = [Location]()
     
     
-    init() {
-        self.locations = LocationDataService.mockLocations
-    }
+//    init() {
+//        self.locations = LocationDataService.mockLocations
+//    }
     
     func pinButtonTapped(loc : Location) {
         pinTapped = loc
     }
     
     func generateMocLocations(for location : CLLocationCoordinate2D) -> [Location] {
-        return [
+        locations = [
             Location(
                 name: "Дядя Борис",
                 imageName: FriendPhoto.uncleBorya,
@@ -68,5 +68,6 @@ final class MainMapViewModel : ObservableObject {
                 location: GetRandom.shared.location(currentLocation: location)
             )
         ]
+        return locations
     }
 }
